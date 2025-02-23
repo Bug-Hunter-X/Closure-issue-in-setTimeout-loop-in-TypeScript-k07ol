@@ -1,0 +1,3 @@
+This repository demonstrates a common closure-related bug in JavaScript (and therefore TypeScript) when using `setTimeout` within a loop.  The problem arises because the `setTimeout` callback function closes over the variable `i`, but the loop continues to modify `i` before the callbacks execute. This results in all callbacks logging the final value of `i`, rather than the value of `i` at the time the callback was created.
+
+The `bug.ts` file shows the erroneous code, and `bugSolution.ts` provides a corrected version.
